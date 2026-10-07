@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+	<head>
+		<title>Template</title>
+		<meta http-equiv="content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="description" content=""/>
+		<meta name="keywords" content=""/>
+		<!--<link rel="shortcut icon" href="./favicon.png" type="image/png" sizes="16x16"/>
+		<link rel="shortcut icon" href="./logo192.png" type="image/png" sizes="192x192"/>-->
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script type="text/javascript" src="./code.js"></script>
+	</head>
+	
+	<body>
+	<!-- HEADER -->
+	<header><img src="./img/logo.png"></header>
+	<!-- MENU -->
+	<div id="menu">
+		<img id="menu-char" class="menu-icon" title="Personaje" src="./img/menu_char.png">
+		<img id="menu-attack" class="menu-icon" title="Ataque" src="./img/menu_attack.png">
+		<img id="menu-defense" class="menu-icon" title="Defensa" src="./img/menu_defense.png">
+		<img id="menu-heal" class="menu-icon" title="Curación" src="./img/menu_heal.png">
+		<img id="menu-special" class="menu-icon" title="Especial" src="./img/menu_special.png">
+		<img id="menu-event" class="menu-icon hidden" title="Evento" src="./img/menu_event.png">
+		<img id="menu-download" class="menu-icon download hidden" title="Descargar Carta" src="./img/menu_download.png">
+	</div>
+	
+	<!-- APP -->
+	
+		<div id="wrapper" class="hidden">
+			<div id="content">
+				<div id="loadDiv">
+					<input type="file" id="loadImg" name="loadImg" />
+				</div>
+			
+				<div id="previewMenuContainer" class="hidden">
+			
+					<div id="previewDiv"></div>
+								
+					<div id="attributes">
+						
+						<!-- NAME -->
+						<div id="cardName">					
+							<label for="name">Name:</label>
+							<input
+								type="text"
+								id="txtName"
+								name="name"
+								size="10"
+							/>
+							</br>						
+						</div>
+											
+						<!-- VIT -->
+						<div id="cardVit" class="hidden">
+							<label for="vit">Vitalidad:</label>
+							<input
+								type="text"
+								id="txtVit"
+								name="vit"
+								size="4"
+							/>
+							</br>
+						</div>
+						
+						<!-- ATQ -->
+						<div id="cardAtk" class="hidden">
+							<label for="atq">Ataque:</label>
+							<input
+								type="text"
+								id="txtAtq"
+								name="atq"
+								size="4"
+							/>
+							</br>
+						</div>
+						
+						<!-- DEF -->
+						<div id="cardDef" class="hidden">
+							<label for="def">Defensa:</label>
+							<input
+								type="text"
+								id="txtDef"
+								name="def"
+								size="4"
+							/>
+							</br>
+						</div>
+						
+						<!-- CHAR ATTRIBUTES -->
+						<div id="carAttrContainer" class="hidden">
+							<span>Raza:</span></br>
+							<div id="race" class="card-attr-row">
+								<img id="race-human" class="attr-icon" title="Humano" src="./img/icons/menu/menu_char_human.png">
+								<img id="race-beast" class="attr-icon" title="Bestia" src="./img/icons/menu/menu_char_beast.png">
+								<img id="race-robot" class="attr-icon" title="Robot" src="./img/icons/menu/menu_char_robot.png">
+								<img id="race-monster" class="attr-icon" title="Monstruo" src="./img/icons/menu/menu_char_monster.png">
+								<img id="race-esper" class="attr-icon" title="Ésper" src="./img/icons/menu/menu_char_esper.png">
+							</div>
+							
+							<div id="gender" class="card-attr-row">
+								<span>Género:</span></br>
+								<img id="gender-female" class="attr-icon" title="Femenino" src="./img/icons/menu/menu_gender_female.png">
+								<img id="gender-male" class="attr-icon" title="Masculino" src="./img/icons/menu/menu_gender_male.png">
+								<img id="gender-nogender" class="attr-icon" title="Sin Género" src="./img/icons/menu/menu_gender_nogender.png">
+							</div>
+							
+							<div id="align" class="card-attr-row">
+								<span>Alineación:</span></br>
+								<img id="align-good" class="attr-icon" title="Bueno" src="./img/icons/menu/menu_align_good.png">
+								<img id="align-evil" class="attr-icon" title="Malvado" src="./img/icons/menu/menu_align_evil.png">
+							</div>
+							
+							<div id="power" class="card-attr-row">
+								<span>Tipo de Ataques:</span></br>
+								<img id="power-hit" class="attr-icon" title="Golpes" src="./img/icons/menu/menu_power_hit.png">
+								<img id="power-phisicalweapon" class="attr-icon" title="Armas Cuerpo a Cuerpo" src="./img/icons/menu/menu_power_phisicalweapon.png">
+								<img id="power-fireweapon" class="attr-icon" title="Armas de Fuego" src="./img/icons/menu/menu_power_fireweapon.png">
+								<img id="power-magic" class="attr-icon" title="Magia" src="./img/icons/menu/menu_power_magic.png">
+								<img id="power-mind" class="attr-icon" title="Psiquico" src="./img/icons/menu/menu_power_mind.png">
+							</div>
+							
+						</div>
+						
+						<!-- DESC -->
+						<div id="cardDesc">
+							<label for="desc">Descripción:</label>
+							<textarea id="txtDesc"	name="desc"	cols="40" rows="5"></textarea>
+						</div>
+				</div>
+
+				
+					<div id="canvasDiv">				
+						<canvas id="card" width="744" height="1037"></canvas>
+					</div>
+				</div>
+			</div>
+						
+			<!-- FOOTER -->
+			<footer>
+				CCB Card Generator <small>rev20261007</small> by <a href="/">Ferran Garcia</a>
+				<br />
+				<i class="icon heart"></i> <a href="https://www.paypal.me/ferrangc/3" target="_blank" rel="nofollow">Donate</a>
+			</footer>
+		</div>
+	</body>
