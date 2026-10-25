@@ -303,7 +303,7 @@ async function printPreview(){
 			await addPreviewText(3);
 			await addPreviewText(4);
 			await addPreviewText(5); //vacío
-			await addPreviewLayer(6,'layers/bottom.png');
+			await addPreviewLayer(6,'layers/bottom_def.png');
 			await addPreviewText(7); //vacío
 			await addPreviewText(8); //vacío
 			await addPreviewText(9); //vacío
